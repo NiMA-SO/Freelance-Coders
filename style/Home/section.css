@@ -1,0 +1,1102 @@
+/* section-1 */
+.section{
+    width: 79%;
+    z-index: 20;
+    margin: 5% auto;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    backdrop-filter: blur(60px);
+    background-color: transparent;
+    border: .5px solid rgba(130, 130, 247, 0.952);
+    border-bottom: transparent;
+    overflow: hidden;
+    box-sizing: content-box;
+    padding-bottom: 100px;
+}
+/* head */
+#head{
+    width: 100%;
+    padding: 50px 100px;
+    text-align: center;
+    background-color: lightgray;
+}
+#head h3{
+    color: rgb(186, 171, 253);
+    font-family: inter;
+}
+#head h2{
+    color: rgb(189, 189, 243);
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-family: lalezar;
+    margin-top: 30px;
+}
+#head button {
+    width: 200px;
+    font-size: 20px;
+    padding: 10px 0;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: blue;
+    color: white;
+    margin-top: 40px;
+}
+/* galery-slider */
+  
+  main {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    margin-bottom: 0px;
+  }
+  
+  .item {
+    width: 200px;
+    height: 300px;
+    list-style-type: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 30px rgba(255,255,255,0.3) inset;
+    transition: transform 0.1s, left 0.4s, top 0.8s, width 1s, height 1s,filter .6s;
+    /* transition: transform 2s ease-in-out; */
+    &:hover {
+      filter: contrast(200%);
+    }
+    &:nth-child(1), &:nth-child(2) {
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transform: none;
+      border-radius: 0;
+      box-shadow: none;
+      opacity: 1;
+    }
+  
+    &:nth-child(3) { left: 50%; }
+    &:nth-child(4) { left: calc(50% + 220px); }
+    &:nth-child(5) { left: calc(50% + 440px); }
+    &:nth-child(6) { left: calc(50% + 660px); opacity: 0; }
+  }
+  
+  .content {
+    width: min(30vw,400px);
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+    transform: translateY(-50%);
+    font: 400 0.85rem helvetica,sans-serif;
+    color: white;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+    opacity: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.568);
+    padding: 10px 20px;
+    border-radius: 30px;
+    overflow: hidden;
+  
+    & .title {
+      font-family: monteserrat;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  
+    & .description {
+      line-height: 1.7;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.8rem;
+      text-align: justify;
+      overflow: hidden;
+    }
+  }
+  .btn-content {
+    border: none;
+    padding: 0.8em 2.5em;
+    outline: none;
+    color: white;
+    font-style: 1.2em;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    background: none;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.45);
+  }
+  
+  .btn-content:before,
+  .btn-content:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10em;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 105%;
+    height: 105%;
+    content: "";
+    z-index: -2;
+    background-size: 400% 400%;
+    background: linear-gradient(
+      60deg,
+      #f79533,
+      #f37055,
+      #ef4e7b,
+      #a166ab,
+      #5073b8,
+      #1098ad,
+      #07b39b,
+      #6fba82
+    );
+  }
+  
+  .btn-content:before {
+    -webkit-filter: blur(7px);
+    filter: blur(7px);
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    -webkit-animation: pulse 10s infinite ease;
+    animation: pulse 10s infinite ease;
+  }
+  
+  .btn-content:after {
+    -webkit-filter: blur(0.3px);
+    filter: blur(0.3px);
+  }
+  
+  .btn-content:hover:before {
+    width: 115%;
+    height: 115%;
+  }
+
+
+  .item:nth-of-type(2) .content {
+    display: block;
+    animation: show 0.75s ease-in-out 0.3s forwards;
+  }
+  
+  @keyframes show {
+    0% {
+      filter: blur(5px);
+      transform: translateY(calc(-50% + 75px));
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+  
+.nav {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    z-index: 5;
+    user-select: none;
+}
+.btn {
+    cursor: pointer;
+    background-color: rgba(121, 119, 150, 0.87);
+    color: white;
+    border: .5px solid rgba(0,0,0,0.6);
+    padding: 20px;
+    margin: 5px;
+    border-radius: 50%;
+    transition: all .2s;
+}
+.btn:hover {
+  background-color: white;
+  color: rgba(121, 119, 150, 0.87);
+}
+  
+  @media (width > 650px) and (width < 900px) {
+    .content {
+      & .title        { font-size: 1rem; }
+      & .description  { font-size: 0.7rem; }
+      & button        { font-size: 0.7rem; }
+    }
+    .item {
+      width: 160px;
+      height: 270px;
+  
+      &:nth-child(3) { left: 50%; }
+      &:nth-child(4) { left: calc(50% + 170px); }
+      &:nth-child(5) { left: calc(50% + 340px); }
+      &:nth-child(6) { left: calc(50% + 510px); opacity: 0; }
+    }
+  }
+  
+  @media (width < 650px) {
+    .content {
+      left: 20px;
+      & .title{ font-size: 12px;letter-spacing: .5px; }
+      & .description{ font-size: 10px;text-align: left;height: 120px; }
+      & button{ font-size: 0.7rem; }
+    }
+    .item {
+      width: 130px;
+      height: 220px;
+  
+      &:nth-child(3) { left: 50%; }
+      &:nth-child(4) { left: calc(50% + 140px); }
+      &:nth-child(5) { left: calc(50% + 280px); }
+      &:nth-child(6) { left: calc(50% + 420px); opacity: 0; }
+    }
+    .nav{
+      bottom: 50px;
+    }
+  }
+  @media (width < 370px) {
+    .btn{
+      padding: 15px;
+      margin: 2px;
+    }
+    .nav{
+      bottom: 30px;
+    }
+  }
+  /* head text */
+  .head{
+    color: rgb(217, 217, 252);
+    font-family: lalezar;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 20px;
+    margin-top: 40px;
+    font-variant: small-caps;
+    font-size: 50px;
+    text-transform: capitalize;
+    &::selection{
+      color: rgb(0, 60, 255);
+      background-color: white;
+    }
+}
+@media (max-width:750px) {
+  .head{
+    font-size: 40px;
+  }
+}
+@media(max-width:630px){
+  .head{
+    font-size: 30px;
+  }
+}
+@media(max-width:510px){
+  .head{
+    font-size: 25px;
+  }
+}
+/* Learning Path */
+#Learning-Path{
+    width: 100%;
+    height: 600px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+#Path-left{
+    width: 50%;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 25px;
+    z-index: 20;
+    
+}
+.path-left-item{
+  width: 300px;
+  height: 100px;
+  /* background-color: white; */
+  margin: 0px auto;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 25px;
+  font-family: inter;
+  padding-top: 25px;
+  color: white;
+  font-variant: small-caps;
+  position: relative;
+  cursor: pointer;
+  transition: transform .7s;
+  &:hover {
+    transform: rotateY(180deg); 
+    z-index: 20;
+  }
+  &#path-item-1{
+    background-color: #3EECAC;
+    background-image: linear-gradient(19deg, #3EECAC 0%, #EE74E1 100%); 
+    &::before {
+      content: "Front-End Development Roadmap                                                                                                                  1. Basic Web Technologies: HTML5  CSS3  JavaScript (ES6+)                                      2. Responsive Web Design: Media Queries Flexbox CSS Grid                                                   3. CSS Preprocessors: Sass or Less                                     4. Version Control/Git: Basic Git commands                                            5. Build Tools: Task Runners (e.g., Gulp, Grunt) Module Bundlers (e.g., Webpack)        6. Frameworks and Libraries: Bootstrap or Tailwind CSS jQuery (optional) Front-end frameworks (e.g., React, Angular, or Vue.js)                                7. Web Performance Optimization: Minification Compression Lazy Loading CDNs                                          8. Browser Developer Tools: Profiling and debugging           9. Responsive Design Frameworks: Bootstrap Materialize CSS Foundation 10. APIs and AJAX: Fetch API XMLHttpRequest Consuming RESTful APIs                                 11. Web Security: Cross-Origin Resource Sharing (CORS) HTTPS                        12. Progressive Web Apps (PWAs): Service Workers Offline Support                      13. Web Accessibility: ARIA (Accessible Rich Internet Applications) Semantic HTML 14. Testing and Debugging: Unit Testing End-to-End Testing Debugging Tools     15. Web Animation: CSS Animations/Transitions JavaScript Animation Libraries (e.g., GreenSock Animation Platform)             16. Cross-Browser Compatibility: Browser testing Browser compatibility tools                                   17. Responsive Images: Image Formats (WebP, SVG) Responsive Images Techniques                                  18. Build a Portfolio: Showcase your projects                     19. Continuous Learning: Stay updated with industry trends Follow blogs and forums This roadmap is a comprehensive guide, and you can customize it based on your specific goals and the technologies you find most relevant. Happy coding!";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 550%;
+      background-color: #3EECAC;
+      background-image: linear-gradient(19deg, #3EECAC 0%, #EE74E1 100%); 
+      transition: all 0.7s;
+      border-radius: 20px;
+      display: none;
+      white-space: pre-wrap;
+      overflow: auto;
+      padding: 20px;
+    }
+    &:hover::before {
+      display: block;
+      transform: rotateY(180deg);
+      font-size: 20px;
+      /* text-align: justify; */
+      font-variant: normal;
+      padding: 10px 20px;
+    }
+  }
+
+  &#path-item-2{
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    &::before {
+      content: '';
+      position: absolute;
+      top: -150%;
+      left: 0;
+      width: 100%;
+      height: 550%;
+      background-color: #4158D0;
+      background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+      transition: all .7s;
+      border-radius: 20px;
+      display: none;
+      white-space: pre-wrap;
+      overflow: auto;
+      padding: 20px;
+    }
+    &:hover::before {
+      display: block;
+      transform: rotateY(180deg);
+      font-size: 20px;
+      /* text-align: justify; */
+      font-variant: normal;
+      padding: 10px 20px;
+    }
+  
+  }
+
+  &#path-item-3{
+    background-color: #3EECAC;
+    background-image: linear-gradient(19deg, #3EECAC 0%, #EE74E1 100%);
+    &::before {
+      content: '';
+      position: absolute;
+      top: -300%;
+      left: 0;
+      width: 100%;
+      height: 550%;
+      background-color: #3EECAC;
+      background-image: linear-gradient(19deg, #3EECAC 0%, #EE74E1 100%);
+      transition: all .7s;
+      border-radius: 20px;
+      display: none;
+      white-space: pre-wrap;
+      overflow: auto;
+      padding: 20px;
+    }
+    &:hover::before {
+      display: block;
+      transform: rotateY(180deg);
+      font-size: 20px;
+      /* text-align: justify; */
+      font-variant: normal;
+      padding: 10px 20px;
+    }
+  }
+
+  &#path-item-4{
+    background-color: #FA8BFF;
+    background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+    &::before {
+      content: "Front-End Development Roadmap                                                                                                                  1. Basic Web Technologies: HTML5  CSS3  JavaScript (ES6+)                                      2. Responsive Web Design: Media Queries Flexbox CSS Grid                                                   3. CSS Preprocessors: Sass or Less                                     4. Version Control/Git: Basic Git commands                                            5. Build Tools: Task Runners (e.g., Gulp, Grunt) Module Bundlers (e.g., Webpack)        6. Frameworks and Libraries: Bootstrap or Tailwind CSS jQuery (optional) Front-end frameworks (e.g., React, Angular, or Vue.js)                                7. Web Performance Optimization: Minification Compression Lazy Loading CDNs                                          8. Browser Developer Tools: Profiling and debugging           9. Responsive Design Frameworks: Bootstrap Materialize CSS Foundation 10. APIs and AJAX: Fetch API XMLHttpRequest Consuming RESTful APIs                                 11. Web Security: Cross-Origin Resource Sharing (CORS) HTTPS                        12. Progressive Web Apps (PWAs): Service Workers Offline Support                      13. Web Accessibility: ARIA (Accessible Rich Internet Applications) Semantic HTML 14. Testing and Debugging: Unit Testing End-to-End Testing Debugging Tools     15. Web Animation: CSS Animations/Transitions JavaScript Animation Libraries (e.g., GreenSock Animation Platform)             16. Cross-Browser Compatibility: Browser testing Browser compatibility tools                                   17. Responsive Images: Image Formats (WebP, SVG) Responsive Images Techniques                                  18. Build a Portfolio: Showcase your projects                     19. Continuous Learning: Stay updated with industry trends Follow blogs and forums This roadmap is a comprehensive guide, and you can customize it based on your specific goals and the technologies you find most relevant. Happy coding!";
+      position: absolute;
+      top: -450%;
+      left: 0;
+      width: 100%;
+      height: 550%;
+      background-color: #FA8BFF;
+      background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+      transition: all 0.7s;
+      border-radius: 20px;
+      display: none;
+      white-space: pre-wrap;
+      overflow: auto;
+      padding: 20px;
+    }
+    &:hover::before {
+      display: block;
+      transform: rotateY(180deg);
+      font-size: 20px;
+      /* text-align: justify; */
+      font-variant: normal;
+      padding: 10px 20px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+#Path-right{
+    background-image: url("../../images/path/1.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 100% 100%;
+    width: 50%;
+    height: 600px;
+    animation: pathImage 20s linear infinite ;
+}
+@keyframes pathImage {
+  0%{
+    background-image: url("../../images/path/1.svg");
+  }
+  10%{
+    background-image: url("../../images/path/1.svg");
+    transform: scale(.5);
+  }
+  25%{
+    background-image: url("../../images/path/2.svg");
+  }
+  35%{
+    background-image: url("../../images/path/2.svg");
+    transform: scale(1);
+  }
+  50%{
+    background-image: url("../../images/path/3.svg");
+  }
+  60%{
+    background-image: url("../../images/path/3.svg");
+    transform: scale(.5);
+  }
+  75%{
+    background-image: url("../../images/path/4.svg");
+  }
+  85%{
+    background-image: url("../../images/path/4.svg");
+    transform: scale(1);
+  }
+  100%{
+    background-image: url("../../images/path/1.svg");
+    transform: scale(1);
+  }
+}
+/* ریسپانسیویتی */
+@media (max-width: 768px) {
+    #Learning-Path {
+        flex-direction: column;
+        height: 1000px;
+    }
+    #Path-left {
+        width: 100%;
+        height: 60%;
+    }
+    #Path-right{
+        width: 100%;
+        height: 40%;
+    }
+}
+@media (max-width:400px) {
+  .path-left-item{
+    width: 250px;
+  }
+}
+@media (max-width:319px) {
+  .path-left-item{
+    width: 200px;
+  }
+}
+/* mahboob */
+#mahboob{
+    width: 100%;
+    height: 500px;
+    box-sizing: content-box;
+    padding-bottom: 80px;
+    padding-top: 10px;
+    /* background-color: rgb(0, 252, 0); */
+    margin: 0 auto;
+}
+#mahboob p{
+    color: white;
+    font-family: lalezar;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin: 5px 0
+}
+#mahboob-con {
+  /* background-color: red; */
+  width: 100%;
+  height: 370px;
+  margin-top: 5px;
+  margin: 0 auto;
+  overflow-x: auto; /* افزودن اسکرول افقی */
+  white-space: nowrap; /* جلوگیری از شکستن خطوط */
+  cursor: pointer;
+  scroll-behavior: smooth; /* افزودن افکت smooth به اسکرول */
+  transition: all 1s;
+  user-select: none;
+}
+#mahboob-con:active {
+  cursor: grabbing;
+}
+#mahboob-con::-webkit-scrollbar {
+  display: none;
+}
+#mahboob-con > div {
+  display: inline-block;
+}
+
+.dragging {
+  cursor: grabbing;
+}
+.courses-mahboob{
+  width: 496px;
+    height: 350px;
+    background-color: rgba(243, 243, 243, 0.1);
+    margin: 10px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    user-select: none;
+}
+@media (max-width:630px) {
+  .courses-mahboob{
+    width: 100%;
+    height: 80%;
+  }
+  #mahboob{
+    height: 600px;
+  }
+
+}
+.courses-mahboob .courses-number{
+  margin-top: 10px;
+  & p{
+    bottom: 7px;
+    right: 10px;
+  }
+}
+.courses-images-container-mahboob{
+  background-color: lightgray;
+  width: 100%;
+  height: 85%;
+  overflow: hidden;
+  border-radius: 20px;
+  &:hover img{
+    transform: scale(1.2);
+    transition: all 1s;
+    filter:none;
+  }
+}
+.img1,.img2,.img3,.img4,.img5,.img6{
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
+  filter: grayscale(100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* filter: hue-rotate(90deg); */
+  /* filter: blur(1px); */
+  /* filter: sepia(100%); */
+  /* filter: brightness(200%); */
+  /* filter: contrast(200%); */
+  &.img1{
+    background-image: url("../../images/kala/php.png");
+  }
+  &.img2{
+    background-image: url("../../images/kala/web-socket.png");
+  }
+  &.img3{
+    background-image: url("../../images/kala/Python.png");
+  }
+  &.img4{
+    background-image: url("../../images/kala/pro-dashboard.png");
+  }
+  &.img5{
+    background-image: url("../../images/kala/library-javascript.png");
+  }
+  &.img6{
+    background-image: url("../../images/kala/Node-js.png");
+  }
+  &:hover{
+    transform: scale(1.2);
+    transition: all 1s;
+    filter:none;
+  }
+}
+.courses-mahboob hr{
+  background-color: lightgray;
+  border-radius: 100%;
+  margin: 5px;
+  margin-top: 10px;
+}
+#mahboob-btn{
+    width: 100%;
+    text-align: center;
+    user-select: none;
+    & > button{
+      font-size: 16px;
+      outline: none;
+      border: none;
+      width: 70px;
+      height: 50px;
+      background-color: rgba(58, 71, 255, 0.418);
+      color: rgb(217, 217, 248);
+      cursor: pointer;
+    }
+    & button:nth-child(1){
+      border-radius: 50% 20% / 10% 40%;
+    }
+    & button:nth-child(2){
+      border-radius: 20% 50% / 40% 10%;
+    }
+}
+#courses-text{
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    letter-spacing:3px;
+    font-family: lalezar;
+}
+#courses{
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: content-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+    /* background-color: lightgreen; */
+    padding: 20px 0;
+    overflow: hidden;
+}
+.courses{
+    width: 300px;
+    height: 400px;
+    background-color: rgba(243, 243, 243, 0.1);
+    margin: 10px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    /* transform: translateY(200px); */
+    /* opacity: 0; */
+    transition: all 1s;
+    user-select: none;
+    /* animation: courses 1s linear 1 forwards; */
+}
+@keyframes courses{
+  0%{
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.courses:hover .Buy{
+  transform: translateY(0px);
+  display: inline;
+  transition: all .5s;
+}
+.Buy{
+  width: 100%;
+  height: 40%;
+  position: absolute;
+  transform: translateY(+200px);
+  /* display: none; */
+  transition: all .5s;
+  border-radius: 10px;
+  background-color: rgba(243, 243, 243, 0.1);
+  text-align: center;
+  z-index: 20;
+}
+
+.Buy button{
+  width: 70%;
+  height: 30%;
+  border: .1px solid lightgray;
+  outline: none;
+  color: white;
+  text-align: center;
+  margin: 18% 0;
+  border-radius: 30px;
+  background-color: rgba(243, 243, 243, 0.226);
+  position: relative;
+  z-index: 30;
+  font-size: 20px;
+  z-index: 24;
+  cursor: pointer;
+}
+.Buy .buy-span{
+  border-radius: 30px;
+  width: 70%;
+  height: 30%;
+  margin: 18% auto;
+  background-color: rgb(0, 60, 255);
+  position: absolute;
+  z-index: 22;
+  transition: all .5s;
+  text-align: right;
+  padding-right: 17px;
+  padding-top: 10px;
+  font-size: 25px;
+  color: white;
+}
+.buy-span .buy-icon{
+  display: none;
+}
+
+.courses:hover p,.courses:hover .info/*,.courses:hover .courses-number*/{
+  display: none;
+}
+.courses:hover .courses-number{
+  position: absolute;
+  z-index: 10;
+  margin-top: 10px;
+}
+.courses:hover hr{
+  margin-top: 20px;
+}
+.courses-images-container{
+  background-color: lightgray;
+  width: 100%;
+  height: 42.3%;
+  overflow: hidden;
+  border-radius: 20px;
+  &:hover img{
+    transform: scale(1.2);
+    transition: all 1s;
+    filter:none;
+  }
+}
+.courses-images-container img{
+  width: 100%;
+  transition: all 1s;
+  filter: grayscale(100%);
+  /* filter: hue-rotate(90deg); */
+  /* filter: blur(1px); */
+  /* filter: sepia(100%); */
+  /* filter: brightness(200%); */
+  /* filter: contrast(200%); */
+}
+@media (max-width:380px) {
+  .courses-images-container{
+    height: 35%;
+  }
+}
+@media (max-width:310px) {
+  .courses-images-container{
+    height: 28%;
+  }
+}
+@media (max-width:335px) {
+  .time{
+    width: 50%;
+  }
+}
+@media (max-width:325px) {
+  .time{
+    width: 60%;
+  }
+  .info{
+    margin-bottom: 15px;
+  }
+  .courses-number{
+    margin-top: 10px;
+  }
+}
+.courses h2{
+  font-size: 16px;
+  margin: 15px 10px 5px 10px;
+  font-family: roboto;
+  letter-spacing: 1px;
+  height: 50px;
+  color: white;
+}
+.courses p{
+  margin:5px;
+  margin-top: 10px;
+  font-family: JakartaSans;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 20px;
+  height: 80px;
+  overflow: hidden;
+  color: white;
+  /* text-align: center; */
+}
+.teacher-icon{
+  font-size: 15px;
+  margin: 5px 5px;
+  position: relative;
+  top: 5px;
+  color: white;
+}
+.teacher-name{
+  font-size: 10px;
+  margin: 5px;
+  letter-spacing: 2px;
+  position: relative;
+  top: -2px;
+}
+.info{
+  width: 100%;
+  height: 35px;
+  /* background-color: #07b39b; */
+  position: relative;
+  display: flex;
+  color: white;
+}
+.time{
+  text-align: right;
+  width: 30%;
+  /* background-color: lightgray; */
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
+.teacher{
+  width: 70%;
+  position: absolute;
+  left: 0;
+}
+.courses hr{
+  background-color: lightgray;
+  border-radius: 100%;
+  margin: 5px;
+  transition: all 1s;
+}
+
+.courses-number{
+  width: 100%;
+  height: 100%;
+  /* background-color: lightgray; */
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 15px;
+  font-family:roboto;
+  color: white;
+}
+.people-numaber{
+  width:auto;
+  height: 100%;
+  /* background-color: #07b39b; */
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  padding: 2px 20px;
+  padding-left: 0;
+  color: white;
+}
+.people-numaber   p{
+  position: relative;
+  bottom: 12px;
+  font-family:roboto;
+}
+
+
+@media (max-width:811px) {
+    #courses{
+        height: 1280px;
+    }
+}
+/* #articles{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightsteelblue;
+    margin: 20px 0;
+    box-sizing: content-box;
+    gap: 10px;
+    padding: 50px 0;
+}
+.articles-child{
+    width: 350px;
+    height: 500px;
+    background-color: white;
+    margin: 0 auto;
+}
+@media (max-width:450px) {
+  
+  .articles-child{
+    width: 250px;
+  }
+} */
+#help{
+    width: 100%;
+    box-sizing: content-box;
+    /* background-color: rgb(162, 244, 255); */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 40px;
+    margin: 20px 0;
+    padding: 30px 0;
+}
+.help-child{
+    width: 350px;
+    height: 250px;
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* text-overflow: ellipsis;
+    white-space: nowrap; */
+}
+@media (max-width:370px) {
+  .help-child{
+    width: 300px;
+    height: 300px;
+  }
+}
+.help-child h3 {
+  margin: 0;
+  font-size: 18px; /* Adjust the font size as needed */
+  color: #ffffff; /* Adjust the text color as needed */
+  text-wrap: wrap;
+  margin-bottom: 20px;
+  font-family: inter;
+}
+.help-child p{
+  width: 100%;
+  text-wrap: wrap;
+  color: white;
+  font-family: JakartaSans;
+}
+#help-child-1{
+  background-color: #FF3CAC;
+background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+}
+#help-child-2{
+  background-color: #3EECAC;
+  background-image: linear-gradient(19deg, #3EECAC 0%, #EE74E1 100%);
+  
+}
+#help-child-3{
+  background-color: #FEE140;
+background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
+}
+#help-child-4{
+  background-color: #FA8BFF;
+background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+}
+
+
+/* section 2 */
+
+#section-2{
+  display: none;
+}
+
+/* section 3 */
+
+#section-3{
+  display: none;
+}
+#social-con{
+  width: 100%;
+  box-sizing: content-box;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-align: center;
+}
+.social{
+  width: 300px;
+  height: 500px;
+  background-color: rgba(255, 255, 255, 0.096);
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 30px;
+}
+.social img{
+  width: 100%;
+  height: auto;
+}
+.social input{
+  width: 90%;
+  outline: none;
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgba(168, 168, 168, 0.336);
+  text-align: center;
+  color: white;
+  user-select: none;
+  margin-top: 20px;
+}
+#copyButton,#copyButton2,#copyButton3{
+  width: 70%;
+  margin: 30px auto;
+  outline: none;
+  border: none;
+  background-color: #2BD2FF;
+  font-family: byekan;
+  font-size: 25px;
+  border-radius: 30px;
+  height: 50px;
+  color: white;
+  transition: .5s;
+  cursor: pointer;
+}
+#copyButton:hover{
+  background-color: white;
+  color: rgb(117, 117, 247);
+}
+#copyButton2:hover{
+  background-color: white;
+  color: rgb(117, 117, 247);
+}
+#copyButton3:hover{
+  background-color: white;
+  color: rgb(117, 117, 247);
+}
+
+/* section 4 */
+
+#section-4{
+  display: none;
+}
+#about-us{
+  width: 70%;
+  box-sizing: content-box;
+  margin: 50px auto;
+}
+#about-us pre{
+  color: white;
+  text-wrap: wrap;
+  text-align: center;
+  line-height: 30px;
+  font-size: 25px;
+  font-family: lalezar;
+  letter-spacing: 2px;
+}
+#about-us pre::selection{
+  background-color: rgb(119, 119, 241);
+  color: white;
+}
