@@ -1,6 +1,3 @@
-/*!
- * Minify by http://www.MinifyWeb.com/
- */
  *{margin:0;padding:0;box-sizing:border-box;text-decoration:none;list-style-type:none}body{scroll-behavior:smooth}@font-face{font-family:monteserrat;src:url("../fonts/monteserrat/static/Montserrat-Regular.ttf")}@font-face{font-family:roboto;src:url("../fonts/roboto/Roboto-Regular.ttf")}@font-face{font-family:byekan;src:url("../fonts/byekan/Byekan.ttf")}@font-face{font-family:lalezar;src:url("../fonts/lalezar/lalezar.ttf")}@font-face{font-family:inter;src:url("../fonts/inter/Inter-VariableFont.ttf")}@font-face{font-family:JakartaSans;src:url("../fonts/plusjakartasans/PlusJakartaSans-Regular.ttf")}body{height:100%;margin:0;--x:calc(var(--posX, 0) * 1px);--y:calc(var(--posY, 0) * 1px);background-image:linear-gradient(115deg, rgb(211 255 215), rgb(0 0 0)),
     radial-gradient( 90% 100% at calc( 50% + var(--x)) calc( 0% + var(--y)), rgb(200 200 200), rgb(022 000 045)),
     radial-gradient(100% 100% at calc( 80% - var(--x)) calc( 0% - var(--y)), rgb(250 255 000), rgb(036 000 000)),
@@ -49,3 +46,51 @@
     10px}#Register
     label{font-size:16px;font-weight:bold;font-family:JakartaSans;letter-spacing:1px}#Register input[type = "button"],#Register input[type = "reset"]{width:120px;height:40px;font-size:20px;border:none;border-radius:5px;background-color:rgb(92, 92, 248);color:white;cursor:pointer}#Register form
     p{font-weight:bold;font-family:inter}@keyframes log-reg-FadeIn{from{transform:translateY(-150%)}to{transform:translateY(0)}}footer{width:100%;background-color:rgb(80, 79, 79);position:relative;bottom:0;right:0;color:white;text-align:center;padding:15px;text-wrap:wrap;font-family:inter}
+
+
+    #profile{
+      background-color: rgba(0, 0, 0, 0);
+      color: lightblue;
+      filter: contrast(200%);
+      background-image: url("../images/profile/profile.png");
+      background-repeat: no-repeat;
+      border: 2px solid rgb(129, 129, 243);
+      padding: 10px;
+      background-size: cover;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      position: absolute;
+      right: 0;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+    #profile-child{
+      background-color: rgba(63, 48, 128, 0.692);
+      width: 190px;
+      /* height: 400px; */
+      box-sizing: content-box;
+      position: relative;
+      top: 140%;
+      transform: translateX(-40%);
+      border-radius: 20px;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: white;
+      padding: 30px 0;
+    }
+    #profile-child div{
+      width: 80%;
+      border-radius: 10px;
+      height: 30px;
+      font-size: 18px;
+      background-color: rgba(255, 255, 255, 0.705);
+      color: #6f73f7;
+      padding-top: 5px;
+      font-weight: bold;
+      font-family: inter;
+      user-select: none;
+    }

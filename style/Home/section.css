@@ -680,249 +680,251 @@
     letter-spacing:3px;
     font-family: lalezar;
 }
-#courses{
-    margin-top: 10px;
-    width: 100%;
-    box-sizing: content-box;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 20px;
-    /* background-color: lightgreen; */
-    padding: 20px 0;
-    overflow: hidden;
+#courses,#courses2{
+  margin-top: 10px;
+  width: 100%;
+  box-sizing: content-box;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+  /* background-color: lightgreen; */
+  padding: 20px 0;
+  overflow: hidden;
 }
 .courses{
-    width: 300px;
-    height: 400px;
-    background-color: rgba(243, 243, 243, 0.1);
-    margin: 10px auto;
-    overflow: hidden;
-    border-radius: 20px;
-    position: relative;
-    /* transform: translateY(200px); */
-    /* opacity: 0; */
-    transition: all 1s;
-    user-select: none;
-    /* animation: courses 1s linear 1 forwards; */
+  width: 300px;
+  height: 400px;
+  background-color: rgba(243, 243, 243, 0.1);
+  margin: 10px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+  /* transform: translateY(200px); */
+  /* opacity: 0; */
+  transition: all 1s;
+  user-select: none;
+  /* animation: courses 1s linear 1 forwards; */
 }
 @keyframes courses{
-  0%{
-    transform: translateY(200px);
-    opacity: 0;
-  }
-  100%{
-    transform: translateY(0px);
-    opacity: 1;
-  }
+0%{
+  transform: translateY(200px);
+  opacity: 0;
+}
+100%{
+  transform: translateY(0px);
+  opacity: 1;
+}
 }
 .courses:hover .Buy{
-  transform: translateY(0px);
-  display: inline;
-  transition: all .5s;
+transform: translateY(0px);
+display: inline;
+transition: all .5s;
 }
 .Buy{
-  width: 100%;
-  height: 40%;
-  position: absolute;
-  transform: translateY(+200px);
-  /* display: none; */
-  transition: all .5s;
-  border-radius: 10px;
-  background-color: rgba(243, 243, 243, 0.1);
-  text-align: center;
-  z-index: 20;
+width: 100%;
+height: 40%;
+position: absolute;
+transform: translateY(+200px);
+/* display: none; */
+transition: all .5s;
+border-radius: 10px;
+background-color: rgba(243, 243, 243, 0.1);
+text-align: center;
+z-index: 20;
 }
 
 .Buy button{
-  width: 70%;
-  height: 30%;
-  border: .1px solid lightgray;
-  outline: none;
-  color: white;
-  text-align: center;
-  margin: 18% 0;
-  border-radius: 30px;
-  background-color: rgba(243, 243, 243, 0.226);
-  position: relative;
-  z-index: 30;
-  font-size: 20px;
-  z-index: 24;
-  cursor: pointer;
+width: 70%;
+height: 30%;
+border: .1px solid lightgray;
+outline: none;
+color: white;
+text-align: center;
+margin: 18% 0;
+border-radius: 30px;
+background-color: rgba(243, 243, 243, 0.226);
+position: relative;
+z-index: 30;
+font-size: 20px;
+z-index: 24;
+cursor: pointer;
 }
 .Buy .buy-span{
-  border-radius: 30px;
-  width: 70%;
-  height: 30%;
-  margin: 18% auto;
-  background-color: rgb(0, 60, 255);
-  position: absolute;
-  z-index: 22;
-  transition: all .5s;
-  text-align: right;
-  padding-right: 17px;
-  padding-top: 10px;
-  font-size: 25px;
-  color: white;
+border-radius: 30px;
+width: 70%;
+height: 30%;
+margin: 18% auto;
+background-color: rgb(0, 60, 255);
+position: absolute;
+z-index: 22;
+transition: all .5s;
+text-align: right;
+padding-right: 17px;
+padding-top: 10px;
+font-size: 25px;
+color: white;
 }
 .buy-span .buy-icon{
-  display: none;
+display: none;
 }
 
 .courses:hover p,.courses:hover .info/*,.courses:hover .courses-number*/{
-  display: none;
+display: none;
 }
 .courses:hover .courses-number{
-  position: absolute;
-  z-index: 10;
-  margin-top: 10px;
+position: absolute;
+z-index: 10;
+margin-top: 10px;
 }
 .courses:hover hr{
-  margin-top: 20px;
+margin-top: 20px;
 }
 .courses-images-container{
-  background-color: lightgray;
-  width: 100%;
-  height: 42.3%;
-  overflow: hidden;
-  border-radius: 20px;
-  &:hover img{
-    transform: scale(1.2);
-    transition: all 1s;
-    filter:none;
-  }
+background-color: lightgray;
+width: 100%;
+height: 42.3%;
+overflow: hidden;
+border-radius: 20px;
+&:hover img{
+  transform: scale(1.2);
+  transition: all 1s;
+  filter:none;
+}
 }
 .courses-images-container img{
-  width: 100%;
-  transition: all 1s;
-  filter: grayscale(100%);
-  /* filter: hue-rotate(90deg); */
-  /* filter: blur(1px); */
-  /* filter: sepia(100%); */
-  /* filter: brightness(200%); */
-  /* filter: contrast(200%); */
+width: 100%;
+transition: all 1s;
+filter: grayscale(100%);
+/* filter: hue-rotate(90deg); */
+/* filter: blur(1px); */
+/* filter: sepia(100%); */
+/* filter: brightness(200%); */
+/* filter: contrast(200%); */
 }
 @media (max-width:380px) {
-  .courses-images-container{
-    height: 35%;
-  }
+.courses-images-container{
+  height: 35%;
+}
 }
 @media (max-width:310px) {
-  .courses-images-container{
-    height: 28%;
-  }
+.courses-images-container{
+  height: 28%;
+}
 }
 @media (max-width:335px) {
-  .time{
-    width: 50%;
-  }
+.time{
+  width: 50%;
+}
 }
 @media (max-width:325px) {
-  .time{
-    width: 60%;
-  }
-  .info{
-    margin-bottom: 15px;
-  }
-  .courses-number{
-    margin-top: 10px;
-  }
-}
-.courses h2{
-  font-size: 16px;
-  margin: 15px 10px 5px 10px;
-  font-family: roboto;
-  letter-spacing: 1px;
-  height: 50px;
-  color: white;
-}
-.courses p{
-  margin:5px;
-  margin-top: 10px;
-  font-family: JakartaSans;
-  font-size: 12px;
-  letter-spacing: 1px;
-  line-height: 20px;
-  height: 80px;
-  overflow: hidden;
-  color: white;
-  /* text-align: center; */
-}
-.teacher-icon{
-  font-size: 15px;
-  margin: 5px 5px;
-  position: relative;
-  top: 5px;
-  color: white;
-}
-.teacher-name{
-  font-size: 10px;
-  margin: 5px;
-  letter-spacing: 2px;
-  position: relative;
-  top: -2px;
+.time{
+  width: 60%;
 }
 .info{
-  width: 100%;
-  height: 35px;
-  /* background-color: #07b39b; */
-  position: relative;
-  display: flex;
-  color: white;
+  margin-bottom: 15px;
+}
+.courses-number{
+  margin-top: 10px;
+}
+}
+.courses h2{
+font-size: 16px;
+margin: 15px 10px 5px 10px;
+font-family: roboto;
+letter-spacing: 1px;
+height: 50px;
+color: white;
+}
+.courses p{
+margin:5px;
+margin-top: 10px;
+font-family: inter;
+font-size: 12px;
+letter-spacing: 1px;
+line-height: 20px;
+height: 80px;
+overflow: hidden;
+color: white;
+word-break: break-all;
+/* text-align: center; */
+}
+.teacher-icon{
+font-size: 15px;
+margin: 5px 5px;
+position: relative;
+top: 5px;
+color: white;
+}
+.teacher-name{
+font-size: 10px;
+margin: 5px;
+letter-spacing: 2px;
+position: relative;
+top: -2px;
+}
+.info{
+width: 100%;
+height: 35px;
+/* background-color: #07b39b; */
+position: relative;
+display: flex;
+color: white;
 }
 .time{
-  text-align: right;
-  width: 30%;
-  /* background-color: lightgray; */
-  position: absolute;
-  right: 10px;
-  top: 8px;
+text-align: right;
+width: 70%;
+/* background-color: lightgray; */
+position: absolute;
+right: 10px;
+top: 8px;
+font-family: inter;
 }
 .teacher{
-  width: 70%;
-  position: absolute;
-  left: 0;
+width: 70%;
+position: absolute;
+left: 0;
 }
 .courses hr{
-  background-color: lightgray;
-  border-radius: 100%;
-  margin: 5px;
-  transition: all 1s;
+background-color: lightgray;
+border-radius: 100%;
+margin: 5px;
+transition: all 1s;
 }
 
 .courses-number{
-  width: 100%;
-  height: 100%;
-  /* background-color: lightgray; */
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 15px;
-  font-family:roboto;
-  color: white;
+width: 100%;
+height: 100%;
+/* background-color: lightgray; */
+display: flex;
+flex-wrap: wrap;
+padding: 0 15px;
+font-family:roboto;
+color: white;
 }
 .people-numaber{
-  width:auto;
-  height: 100%;
-  /* background-color: #07b39b; */
-  position: absolute;
-  right: 0;
-  display: flex;
-  flex-direction: row;
-  padding: 2px 20px;
-  padding-left: 0;
-  color: white;
+width:auto;
+height: 100%;
+/* background-color: #07b39b; */
+position: absolute;
+right: 0;
+display: flex;
+flex-direction: row;
+padding: 2px 20px;
+padding-left: 0;
+color: white;
 }
 .people-numaber   p{
-  position: relative;
-  bottom: 12px;
-  font-family:roboto;
+position: relative;
+bottom: 12px;
+font-family:roboto;
 }
 
 
 @media (max-width:811px) {
-    #courses{
-        height: 1280px;
-    }
+  #courses{
+      height: 1280px;
+  }
 }
 /* #articles{
     width: 100%;
